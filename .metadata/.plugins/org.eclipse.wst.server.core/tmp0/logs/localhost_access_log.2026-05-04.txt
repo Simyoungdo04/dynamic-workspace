@@ -1,0 +1,6 @@
+127.0.0.1 - - [04/May/2026:10:38:05 +0900] "GET / HTTP/1.1" 404 808
+127.0.0.1 - - [04/May/2026:10:43:37 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [04/May/2026:10:43:40 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [04/May/2026:10:43:40 +0900] "GET /favicon.ico HTTP/1.1" 404 819
+0:0:0:0:0:0:0:1 - - [04/May/2026:10:44:09 +0900] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 864
+0:0:0:0:0:0:0:1 - - [04/May/2026:10:44:42 +0900] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 864
