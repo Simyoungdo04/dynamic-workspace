@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	ul{
+		list-style: none;
+		line-height: 200%;
+	}
+</style>
+</head>
+<body>
+	<h1>연습</h1>
+	<form method="get" action="http://localhost:8088/first/practice.do">
+		<ul>
+			<li>
+				이름 : <input type="text" name="name"/>
+			</li>
+			<li>
+				포지션 : 
+				<select name="position">
+					<option>공격수</option>
+					<option>미드필더</option>
+					<option>수비수</option>
+				</select>
+			</li>
+			<li>
+				키 : <input type="range" min="160" max="210" name=""/>
+			</li>
+			<li>
+			
+			</li>
+			<li>
+			
+			</li>
+			<li>
+				
+			</li>
+			<li>
+				
+			</li>
+			<li>
+				
+			</li>
+			<li>
+				
+			</li>
+			<li>
+				<button type="submit">제출</button>
+			</li>
+		</ul>
+	</form>
+</body>
+</html>
