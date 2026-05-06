@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	// 이 구문을 스크립틀릿(scriptlet)이라고 함
+	// 자바코드를 쓸 수 있음
+	
+	// 현재 JSP상에서 출력해줄 값 => request의 Attribute로 set해서 전달받음
+	
+	// request.getAttribute("name값") : Object
+	
+	String name = (String)request.getAttribute("name");
+	String gender = (String)request.getAttribute("gender");
+	int age = (int)request.getAttribute("age");
+	double height = (double)request.getAttribute("height");
+	String city = (String)request.getAttribute("city");
+	String[] foods = (String[])request.getAttribute("foods");
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>응답페이지</title>
+</head>
+<body>
+	
+	<h1>배정</h1>
+	
+	<h3><%= name %>의 정보</h3>
+	나이 : <%= age %> <br>
+	키 : <%= height %> <br>
+	지역 : <%= city %>  <br>
+	
+	성별 :
+	<% if("선택 안 함".equals(gender)) { %>
+		선택 안 함 <br>
+	<% } else if("남자".equals(gender)) { %>
+		남자 <br>
+	<% } else { %>
+		여자 <br>
+	<% } %>
+	
+	좋아하는 음식 : 
+	<% if(foods == null) { %>
+		선택 없음
+	<% } else { %>
+		<ul>
+			<% for(int i = 0; i < foods.length; i++) { %>
+				<li><%= foods[i] %></li>
+			<% } %>
+		</ul>
+		입니다.
+	<% } %>
+	
+	<hr>
+	
+	${ msg }
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
