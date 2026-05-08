@@ -1,0 +1,16 @@
+package com.kh.web.member.model.service;
+
+import com.kh.web.member.model.dto.MemberDto;
+
+public class MemberService {
+	
+	public void validate(MemberDto member) {
+		
+		if(member.getUserId() == null || member.getUserId().trim(.isEmpty())) {
+			throw new RuntimeException();
+		}
+		String pattern = "^[a-zA-Z0-9]{5, 30}";
+		
+	}
+	
+}	

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -9,13 +10,30 @@
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
+=======
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="NewSourceFolderCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1466"/>
+		<item key="DIALOG_Y_ORIGIN" value="426"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="500"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+>>>>>>> b23dc6e (커밋 메시지)
 	<section name="NewPackageWizardPage">
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewPackageCreationWizard.dialogBounds">
+<<<<<<< HEAD
 		<item key="DIALOG_X_ORIGIN" value="706"/>
 		<item key="DIALOG_Y_ORIGIN" value="222"/>
 		<item key="DIALOG_WIDTH" value="525"/>
+=======
+		<item key="DIALOG_X_ORIGIN" value="1466"/>
+		<item key="DIALOG_Y_ORIGIN" value="426"/>
+		<item key="DIALOG_WIDTH" value="533"/>
+>>>>>>> b23dc6e (커밋 메시지)
 		<item key="DIALOG_HEIGHT" value="500"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
@@ -31,9 +49,15 @@
 		<item key="create_unimplemented" value="true"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
+<<<<<<< HEAD
 		<item key="DIALOG_X_ORIGIN" value="706"/>
 		<item key="DIALOG_Y_ORIGIN" value="222"/>
 		<item key="DIALOG_WIDTH" value="575"/>
+=======
+		<item key="DIALOG_X_ORIGIN" value="1466"/>
+		<item key="DIALOG_Y_ORIGIN" value="426"/>
+		<item key="DIALOG_WIDTH" value="592"/>
+>>>>>>> b23dc6e (커밋 메시지)
 		<item key="DIALOG_HEIGHT" value="659"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
@@ -47,8 +71,13 @@
 		<item key="OmitCallToSuper" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
+<<<<<<< HEAD
 		<item key="DIALOG_X_ORIGIN" value="703"/>
 		<item key="DIALOG_Y_ORIGIN" value="72"/>
+=======
+		<item key="DIALOG_X_ORIGIN" value="1463"/>
+		<item key="DIALOG_Y_ORIGIN" value="276"/>
+>>>>>>> b23dc6e (커밋 메시지)
 		<item key="DIALOG_WIDTH" value="531"/>
 		<item key="DIALOG_HEIGHT" value="678"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
@@ -70,15 +99,25 @@
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
+<<<<<<< HEAD
 		<item key="DIALOG_X_ORIGIN" value="698"/>
 		<item key="DIALOG_Y_ORIGIN" value="60"/>
+=======
+		<item key="DIALOG_X_ORIGIN" value="1458"/>
+		<item key="DIALOG_Y_ORIGIN" value="264"/>
+>>>>>>> b23dc6e (커밋 메시지)
 		<item key="DIALOG_WIDTH" value="540"/>
 		<item key="DIALOG_HEIGHT" value="696"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
+<<<<<<< HEAD
 		<item key="DIALOG_X_ORIGIN" value="710"/>
 		<item key="DIALOG_Y_ORIGIN" value="64"/>
+=======
+		<item key="DIALOG_X_ORIGIN" value="1470"/>
+		<item key="DIALOG_Y_ORIGIN" value="268"/>
+>>>>>>> b23dc6e (커밋 메시지)
 		<item key="DIALOG_WIDTH" value="516"/>
 		<item key="DIALOG_HEIGHT" value="691"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

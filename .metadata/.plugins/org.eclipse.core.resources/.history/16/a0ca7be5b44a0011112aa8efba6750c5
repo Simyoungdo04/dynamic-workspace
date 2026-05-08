@@ -1,0 +1,11 @@
+package com.kh.web.member.model.service;
+
+import com.kh.web.member.model.dto.MemberDto;
+
+public class MemberService {
+	
+	public void validate(MemberDto member) {
+		
+	}
+	
+}	
