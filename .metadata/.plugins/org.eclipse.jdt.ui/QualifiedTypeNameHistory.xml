@@ -1,22 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-=======
-    <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.jdbc.SQL"/>
-    <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="javax.annotation.Resources"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
-    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-    <fullyQualifiedTypeName name="com.kh.web.member.model.dao.MemberDao"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
-    <fullyQualifiedTypeName name="com.kh.web.common.Template"/>
->>>>>>> b23dc6e (커밋 메시지)
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>

@@ -1,17 +1,7 @@
 package com.kh.web.member.model.service;
 
-<<<<<<< HEAD
 import java.util.Map;
 
-public class MemberService {
-	
-	public int updateMember(Map<String, String> map) {
-		
-		SqlSession sqlSession = Template.getSqlSession();
-	}
-	
-}
-=======
 import org.apache.ibatis.session.SqlSession;
 
 import com.kh.web.common.Template;
@@ -19,40 +9,45 @@ import com.kh.web.member.model.dao.MemberDao;
 import com.kh.web.member.model.dto.MemberDto;
 
 public class MemberService {
-	private MemberDao md = new MemberDao();
-	public void validate(MemberDto member) {
-		
-		if(member.getUserId() == null || member.getUserId().trim().isEmpty()) {
-			throw new RuntimeException();
-		}
-		String pattern = "^[a-zA-Z0-9]{5, 30}";
-		if(!member.getUserId().matches(pattern)) {
-			
-		}
-		
-	}
-	
-	public int insertMember(MemberDto member) {
-		
-		SqlSession sqlSession = Template.getSqlSession();
-		
-		int result = md.insertMember(sqlSession, member);
-		
-		if(result > 0) {
-			sqlSession.commit();
-		}
-		
-		sqlSession.close();
-		
-		return result;
-		
-	}
-	
-	public void login(MemberDto member) {
-		SqlSession sqlSession = Template.getSqlSession();
-		
-		md.login(sqlSession, member);
-	}
-	
-}	
->>>>>>> b23dc6e (커밋 메시지)
+
+    private MemberDao md = new MemberDao();
+
+    public void validate(MemberDto member) {
+        if (member.getUserId() == null || member.getUserId().trim().isEmpty()) {
+            throw new RuntimeException();
+        }
+        String pattern = "^[a-zA-Z0-9]{5,30}";
+        if (!member.getUserId().matches(pattern)) {
+
+        }
+    }
+
+    public int insertMember(MemberDto member) {
+        SqlSession sqlSession = Template.getSqlSession();
+
+        int result = md.insertMember(sqlSession, member);
+
+        if (result > 0) {
+            sqlSession.commit();
+        }
+
+        sqlSession.close();
+
+        return result;
+    }
+
+    public int updateMember(Map<String, String> map) {
+        SqlSession sqlSession = Template.getSqlSession();
+
+        sqlSession.close();
+
+        return 0;
+    }
+
+    public void login(MemberDto member) {
+        SqlSession sqlSession = Template.getSqlSession();
+
+        md.login(sqlSession, member);
+    }
+
+}

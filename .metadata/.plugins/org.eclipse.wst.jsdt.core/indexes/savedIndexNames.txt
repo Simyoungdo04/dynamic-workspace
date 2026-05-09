@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-INDEX VERSION 1.4+C:\Simyoungdo_Workspace\dynamic-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3141669274.index
-1130138553.index
-107573622.index
+INDEX VERSION 1.4+C:\java_workspace\web_dev\dynamic-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2726923791.index
+3220817699.index
+931202086.index
+3189695840.index
+3259357446.index
 1644764776.index
-=======
-INDEX VERSION 1.4+D:\workspace\web_dev\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1644764776.index
-2916946820.index
->>>>>>> b23dc6e (커밋 메시지)

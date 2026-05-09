@@ -1,26 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
-<<<<<<< HEAD
-    <libraryInfo home="C:\Program Files\Amazon Corretto\jdk21.0.10_7" version="21.0.10"/>
-    <libraryInfo home="C:\Simyoungdo_Workspace\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530\jre" version="21.0.3"/>
-    <libraryInfo home="C:\Simyoungdo_Workspace\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530" version="21.0.3">
-=======
-    <libraryInfo home="C:\Program Files\Amazon Corretto\jdk21.0.11_10" version="21.0.11"/>
-    <libraryInfo home="D:\workspace\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.10.v20260205-0638\jre" version="21.0.10"/>
-    <libraryInfo home="D:\workspace\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.10.v20260205-0638" version="21.0.10">
->>>>>>> b23dc6e (커밋 메시지)
-        <bootpath>
-            <entry path="null"/>
-        </bootpath>
-        <extensionDirs>
-            <entry path="null"/>
-        </extensionDirs>
-        <endorsedDirs>
-            <entry path="null"/>
-        </endorsedDirs>
-    </libraryInfo>
-<<<<<<< HEAD
-=======
     <libraryInfo home="C:\Program Files\Amazon Corretto\jdk25.0.2_10" version="25.0.2"/>
->>>>>>> b23dc6e (커밋 메시지)
 </libraryInfos>
