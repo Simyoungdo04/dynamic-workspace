@@ -1,5 +1,0 @@
-package com.kh.web.member.model.dto;
-
-public class MemberDto {
-	private long memberNo;
-}
