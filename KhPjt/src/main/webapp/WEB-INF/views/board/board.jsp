@@ -6,19 +6,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	header.masthead {
+	   display: none;
+	}   
+	.row{
+		height : 800px;
+	}
+	tr:hover{
+		cursor : pointer;
+	}
+</style>
 </head>
 <body>
-<style>
-header.masthead {
-   display: none;
-}   
-.row{
-	height : 800px;
-}
-tr:hover{
-	cursor : pointer;
-}
-</style>
+
 <br/><br/> 
  
    <jsp:include page="../include/header.jsp"/>
@@ -63,7 +64,9 @@ tr:hover{
 			                        ${ board.userName }
 			                        </td>
 			                        <td style="color: #52d6ffcc;">
-			                        ${ board.boardTitle } &nbsp;
+			                        <a href="http://localhost:8088/kh/detail.bo?boardNo=${ board.boardNo }">
+			                        	${ board.boardTitle } &nbsp;
+			                        </a>
 			                        </td>
 			                        <td>
 			                        ${ board.createDate }
