@@ -109,7 +109,7 @@
             <a class="nav-link js-scroll-trigger" href="http://localhost:8088/kh">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#">공지사항</a>
+            <a class="nav-link js-scroll-trigger" href="http://localhost:8088/kh/notice.do">공지사항</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="http://localhost:8088/kh/boards.do?page=1">게시판</a>
