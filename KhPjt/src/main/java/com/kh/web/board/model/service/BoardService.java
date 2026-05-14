@@ -119,6 +119,76 @@ public class BoardService {
 		
 		return result;
 	}
+
+	public int updateBoard(BoardDto board, AttachmentDto at) {
+		SqlSession sqlSession = Template.getSqlSession();
+		
+		int result = bd.updateBoard(sqlSession, board);
+		
+		// 새 첨부파일이 존재할 경우
+		if(at != null) {
+			if(at.getFileNo() != null) {
+				// 기존 첨부파일이 존재한다.
+				result *= bd.updateAttachment(sqlSession, at);
+			} else {
+				// 기존 첨부파일이 존재하지 않는다
+				result *= bd.insertAttachment(sqlSession, at);
+			}
+		}
+		
+		if(result > 0) {
+			sqlSession.commit();
+		} else {
+			sqlSession.rollback();
+		}
+		
+		sqlSession.close();
+		
+		return result;
+	}
+
+	public int insertImage(BoardDto board, List<AttachmentDto> files) {
+		SqlSession sqlSession = Template.getSqlSession();
+		int result = 0;
+		try {
+			result = bd.insertImage(sqlSession, board);
+			
+			if(result > 0) {
+				
+				for(AttachmentDto file : files) {
+					file.setRefBno(board.getBoardNo());
+					result = bd.insertAttachment(sqlSession, file);
+					
+					if(result == 0) {
+						new RuntimeException();
+					}
+				}
+			}
+			
+		} catch (Exception e) {
+			sqlSession.rollback();
+			result = 0;
+			e.printStackTrace();
+		} finally {
+			if(result > 0) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+			sqlSession.close();
+		}
+		return result;
+	}
+
+	public List<BoardDto> selectImageList() {
+		SqlSession sqlSession = Template.getSqlSession();
+		
+		List<BoardDto> list = bd.selectImageList(sqlSession);
+		
+		sqlSession.close();
+		
+		return list;
+	}
 	
 	
 

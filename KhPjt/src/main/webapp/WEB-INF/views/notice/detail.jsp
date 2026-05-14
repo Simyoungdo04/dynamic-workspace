@@ -84,7 +84,8 @@
 		</div>
 		<div id="buttons">
 			<div class="gap-2 d-md-flex justify-content-md-end">
-				<button type="button" class="btn btn-light return">돌아가기</button>
+				<button type="button" class="btn btn-light return"
+						onclick="location.href='http://localhost:8088/kh/notice.do?page=1'">돌아가기</button>
 				<button type="button" class="btn btn-light">수정</button>
 				<button type="button" class="btn btn-dark" id="del-btn">삭제</button>
 			</div>

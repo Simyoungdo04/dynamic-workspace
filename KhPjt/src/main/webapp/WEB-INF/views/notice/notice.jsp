@@ -32,7 +32,6 @@
 		color : #252525;
 	}
 	#buttons{
-        width : 230px;
         margin : auto;
 	}
 	.btn-dark{
