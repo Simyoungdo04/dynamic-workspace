@@ -211,6 +211,51 @@
 		 	   BOARD_NO DESC
 	</select>
 	
+	<insert id="insertReply">
+		INSERT
+		  INTO
+		  	   WEB_REPLY
+		  	   (
+		  	   REPLY_NO
+		  	 , REF_BNO
+		  	 , REPLY_CONTENT
+		  	 , USER_NO
+		  	   )
+		VALUES
+			   (
+				SEQ_REPLY.NEXTVAL
+			  , #{refBno}
+			  , #{replyContent}
+			  , #{replyWriter}			   
+			   )
+	</insert>
+	
+	<select id="selectReply"
+			resultType="com.kh.web.ajax.model.dto.ReplyDto">
+		SELECT
+			   REPLY_NO
+			 , REPLY_CONTENT
+			 , USER_NAME
+			 , CREATE_DATE
+		  FROM
+		  	   WEB_REPLY WR
+		  JOIN
+		  	   WEB_MEMBER WM ON (WR.USER_NO = WM.USER_NO)
+		 WHERE
+		 	   WR.STATUS = 'N'
+		   AND 
+		   	   REF_BNO = #{boardNo}
+		 ORDER
+		 	BY
+		 	   REPLY_NO DESC
+	</select>
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

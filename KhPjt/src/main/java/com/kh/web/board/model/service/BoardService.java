@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.kh.web.ajax.model.dto.ReplyDto;
 import com.kh.web.board.model.dao.BoardDao;
 import com.kh.web.board.model.dto.AttachmentDto;
 import com.kh.web.board.model.dto.BoardDto;
@@ -188,6 +189,29 @@ public class BoardService {
 		sqlSession.close();
 		
 		return list;
+	}
+
+	public int insertReply(ReplyDto reply) {
+		SqlSession sqlSession = Template.getSqlSession();
+		
+		int result = (bd.insertReply(sqlSession, reply));
+		
+		if(result > 0) {
+			sqlSession.commit();
+		} 
+		sqlSession.close();
+		
+		return result;
+	}
+
+	public List<ReplyDto> selectReply(Long boardNo) {
+		SqlSession sqlSession = Template.getSqlSession();
+		
+		List<ReplyDto> reply = bd.selectReply(sqlSession, boardNo);
+		
+		sqlSession.close();
+		
+		return reply;
 	}
 	
 	

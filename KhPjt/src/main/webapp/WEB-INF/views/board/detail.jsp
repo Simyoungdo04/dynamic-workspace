@@ -91,21 +91,77 @@
 					<tr>
 						<th>댓글작성</th>
 						
-							
-							<td>
-								<textarea readonly cols="50" rows="3" style="resize:none;" class="form-control">로그인 후 이용가능한 서비스입니다.</textarea>
-							</td>
-							<td><button class="btn" style="width : 100%; height : 100%; background-color: #52b1ff; color : white;">댓글등록</button></td>
-
+							<c:choose>
+								<c:when test="${ userInfo ne null }">
+									<td>
+										<textarea id="replyContent" cols="50" rows="3" style="resize:none;" class="form-control"></textarea>
+									</td>
+									<td><button onclick="insertReply();" class="btn" style="width : 100%; height : 100%; background-color: #52b1ff; color : white;">댓글등록</button></td>
+								</c:when>
+								
+								<c:otherwise>
+									<td>
+										<textarea readonly cols="50" rows="3" style="resize:none;" class="form-control">로그인 후 이용가능한 서비스입니다.</textarea>
+									</td>
+									<td><button class="btn" style="width : 100%; height : 100%; background-color: #52b1ff; color : white;">댓글등록</button></td>
+								</c:otherwise>
+							</c:choose>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="tbody">
 				
 				</tbody>
 			</table>
 			<br><br><br><br>
 	    </div>
-
+		<script>
+			function insertReply(){
+				
+				// 댓글 작성 요청
+				$.ajax({
+					url : 'http://localhost:8088/kh/insert.re',
+					type : 'post',
+					data : {
+						boardNo : ${ board.boardNo },
+						content : document.querySelector('#replyContent').value
+					},
+					success : result => {
+						console.log(result);
+						
+						if(result.code === '201'){
+							alertify.alert('댓글 작성 성공');
+							document.querySelector('#replyContent').value = '';
+							selectReply();
+						}
+					}
+				});
+			}
+			
+			window.onload = () => {
+				selectReply();
+			};
+						
+			function selectReply(){
+				$.ajax({
+					url : 'http://localhost:8088/kh/list.re',
+					type : 'get',
+					data : {
+						boardNo : ${board.boardNo}
+					},
+					success : result => {
+						// console.log(result);
+						const el = result.date.map(e => `
+														<tr>
+															<td>\${e.userName}</td>
+															<td>\${e.replyContent}</td>
+															<td>\${e.createDate}</td>
+														</tr>
+												   		`).join('');
+					 	document.querySelector('#tbody').innerHTML = el;
+					}
+				});
+			}
+		</script>
 	</div>
 	
 	<jsp:include page="../include/footer.jsp" />
