@@ -84,7 +84,13 @@
 </head>
 
 <body id="page-top">
-
+	
+	<c:if test="${ not empty alertMsg }">
+		<script>
+			alertify.success('${ alertMsg }');
+		</script>
+		<c:remove var="alertMsg" scope="session"/>
+	</c:if>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -100,16 +106,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="">HOME</a>
+            <a class="nav-link js-scroll-trigger" href="http://localhost:8088/kh">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#">공지사항</a>
+            <a class="nav-link js-scroll-trigger" href="http://localhost:8088/kh/notice.do?page=1">공지사항</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="">게시판</a>
+            <a class="nav-link js-scroll-trigger" href="http://localhost:8088/kh/boards.do?page=1">게시판</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="">사진게시판</a>
+            <a class="nav-link js-scroll-trigger" href="http://localhost:8088/kh/boards.im">사진게시판</a>
           </li>
           
           <c:choose>
@@ -123,11 +129,24 @@
 	          </c:when>
 	          <c:otherwise>
 		          <li class="nav-item">
+<<<<<<< HEAD
 		          <a class="nav-link js-scroll-trigger" href="">내정보</a>
 		          </li>
 		          <li class="nav-item">
 		          <a class="nav-link js-scroll-trigger" href="" onclick="">로그아웃</a>
 		          </li>
+=======
+		          <a class="nav-link js-scroll-trigger" href="http://localhost:8088/kh/mypage.do">내정보</a>
+		          </li>
+		          <li class="nav-item">
+		          <a class="nav-link js-scroll-trigger" onclick="logout();">로그아웃</a>
+		          </li>
+		          <script>
+					function logout(){
+						location.href = 'http://localhost:8088/kh/logout.do';
+					};
+				  </script>
+>>>>>>> 6ed84d0a9c437f70a96faf9686f3ba8d1aa30f76
 	          </c:otherwise>
           </c:choose>
           

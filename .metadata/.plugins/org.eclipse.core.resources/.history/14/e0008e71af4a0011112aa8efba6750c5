@@ -1,9 +1,0 @@
-package com.kh.web.common;
-
-public class Template {
-	
-	public static SqlSession getSqlSession() {
-		
-	}
-	
-}

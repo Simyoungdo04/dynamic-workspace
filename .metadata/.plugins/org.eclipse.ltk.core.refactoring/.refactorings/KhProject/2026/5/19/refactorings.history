@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;KhProject/resources/mapper/NewFile.xml&apos; to &apos;member-mapper.xml&apos;" description="Rename resource &apos;NewFile.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="resources/mapper/NewFile.xml" name="member-mapper.xml" stamp="1778228313871" updateReferences="true"/>
-</session>

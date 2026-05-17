@@ -58,7 +58,25 @@ public class UpdateMemberController extends HttpServlet {
 										,"userNo", String.valueOf(userNo));
 		
 		// 4) Service단 호출
+<<<<<<< HEAD
 		new MemberService().updateMember(map);
+=======
+		MemberDto userInfo = new MemberService().updateMember(map);
+		
+		if(userInfo != null) {
+			// member.setEmail(email);
+			// member.setUserName(userName);
+			session.setAttribute("userInfo", userInfo);
+			
+			// request.getRequestDispatcher("/WEB-INF/views/member/my_page.jsp").forward(request, response);
+			
+			response.sendRedirect("/kh/mypage.do");
+		} else {
+			request.setAttribute("message", "정보수정에 실패했습니다.");
+			// request.getRequestDispatcher("/WEB-INF/views/common/fail_page.jsp").forward(request, response);
+			response.sendRedirect("/kh/fail.do");
+		}
+>>>>>>> 6ed84d0a9c437f70a96faf9686f3ba8d1aa30f76
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

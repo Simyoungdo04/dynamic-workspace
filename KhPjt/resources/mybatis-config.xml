@@ -11,6 +11,8 @@
 
 	<typeAliases>
 		<typeAlias type="com.kh.web.member.model.dto.MemberDto" alias="member"/>
+		<typeAlias type="com.kh.web.board.model.dto.BoardDto" alias="board"/>
+		<typeAlias type="com.kh.web.notice.model.dto.NoticeDto" alias="notice"/>
 	</typeAliases>
 
   <environments default="development">
@@ -26,5 +28,10 @@
   </environments>
   <mappers>
     <mapper resource="mapper/member-mapper.xml"/>
+<<<<<<< HEAD
+=======
+    <mapper resource="mapper/board-mapper.xml"/>
+    <mapper resource="mapper/notice-mapper.xml"/>
+>>>>>>> 6ed84d0a9c437f70a96faf9686f3ba8d1aa30f76
   </mappers>
 </configuration>

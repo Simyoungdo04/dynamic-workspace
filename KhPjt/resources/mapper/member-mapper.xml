@@ -48,4 +48,69 @@
 		   	   STATUS = 'N'
 	</select>
 	
+<<<<<<< HEAD
+=======
+	<update id="updateMember"
+			parameterType="map">
+		UPDATE
+			   WEB_MEMBER
+		   SET
+		   	   USER_NAME = #{ userName}
+		   	 , EMAIL = #{ email }
+		   	 , MODIFY_DATE = SYSDATE
+		 WHERE
+		 	   USER_NO = #{ userNo }
+		   AND
+		   	   STATUS = 'N'		
+	</update>
+	
+	<select id="selectMember"
+			resultType="member"
+			parameterType="long">
+		SELECT
+			   USER_NO
+			 , USER_ID
+			 , USER_NAME
+			 , EMAIL
+			 , ENROLL_DATE
+			 , MODIFY_DATE
+			 , STATUS
+		  FROM
+		  	   WEB_MEMBER
+		 WHERE
+		 	   USER_NO = #{userNo}
+		   AND
+		   	   STATUS = 'N'	
+	</select>
+	
+	<update id="updatePassword"
+			parameterType="com.kh.web.member.model.dto.UpdatePwdDto">
+		UPDATE
+			   WEB_MEMBER
+		   SET
+		   	   USER_PWD = #{ updatePwd }
+		 WHERE		
+		 	   USER_PWD = #{ userPwd }
+		   AND
+		   	   USER_NO = #{ userNo }
+		   AND
+		   	   STATUS = 'N'
+	</update>
+	
+	<update id="deleteMember"
+			parameterType="member">
+		UPDATE
+			   WEB_MEMBER
+		   SET
+   			   STATUS = 'Y'
+   			 , MODIFY_DATE = SYSDATE
+   		 WHERE
+   		 	   USER_NO = #{ userNo }
+   		   AND
+   		   	   USER_PWD = #{ userPwd }
+   		   AND
+   		   	   STATUS = 'N'
+	</update>
+	
+>>>>>>> 6ed84d0a9c437f70a96faf9686f3ba8d1aa30f76
 </mapper>

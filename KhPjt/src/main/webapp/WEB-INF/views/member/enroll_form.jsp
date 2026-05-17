@@ -68,7 +68,7 @@
 				</tr>
 				<tr>
 					<td><input type="password" size="17" maxlength="20" id="password_check"
-						name="" class="form-control tooltipstered" 
+						name="userPwdCheck" class="form-control tooltipstered" 
 						maxlength="20" required="required" aria-required="true"
 						style="ime-mode: inactive; margin-bottom: 25px; height: 40px; border: 1px solid #d9d9de"
 						placeholder="비밀번호가 일치해야합니다."></td>

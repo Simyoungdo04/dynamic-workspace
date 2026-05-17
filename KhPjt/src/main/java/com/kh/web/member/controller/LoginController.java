@@ -50,6 +50,10 @@ public class LoginController extends HttpServlet {
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("userInfo", loginMember);
+<<<<<<< HEAD
+=======
+			session.setAttribute("alertMsg", "로그인 성공");
+>>>>>>> 6ed84d0a9c437f70a96faf9686f3ba8d1aa30f76
 			response.sendRedirect("/kh");
 			
 		} else {

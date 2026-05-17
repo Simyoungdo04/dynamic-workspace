@@ -14,11 +14,16 @@ import com.kh.web.member.model.dto.MemberDto;
 @WebServlet("/mypage.do")
 public class MyPageController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 6ed84d0a9c437f70a96faf9686f3ba8d1aa30f76
     public MyPageController() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+<<<<<<< HEAD
 		HttpSession session = request.getSession();
 		
 		MemberDto member = (MemberDto)session.getAttribute("userInfo");
@@ -27,6 +32,21 @@ public class MyPageController extends HttpServlet {
 			// request.getRequestDispatcher(getServletInfo());
 		}
 		
+=======
+		
+		HttpSession session = request.getSession();	
+		MemberDto member = (MemberDto)session.getAttribute("userInfo");
+		// request.setAttribute("userInfo", member);
+		// 가장 좋은 방법은 DB에서 조회된 내용을 다시 담아주는 방법
+		// 이유 : 항상 최신 데이터로 응답 해주어야함
+		
+		if(member != null) {
+			request.getRequestDispatcher("/WEB-INF/views/member/my_page.jsp").forward(request, response);
+		} else {
+			request.setAttribute("message", "정상적이지 않은 접근입니다.");
+			request.getRequestDispatcher("/WEB-INF/views/common/fail_page.jsp").forward(request, response);
+		}
+>>>>>>> 6ed84d0a9c437f70a96faf9686f3ba8d1aa30f76
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
